@@ -7,7 +7,7 @@ kaboom({
   scale: 2,
 });
 
-const SPEED = 100;
+const SPEED = 140; // 140 feels like a sweet spot
 
 loadRoot('img/');
 loadSprite('block', 'iso-block.png');
@@ -30,7 +30,7 @@ scene('game', () => {
     char.move(SPEED, 0);
   });
   onKeyDown('space', () => {
-    char.jump();
+    if (char.isGrounded()) char.jump();
   });
   
   add([

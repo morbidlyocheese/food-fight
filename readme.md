@@ -6,8 +6,9 @@ food fight
 
 ---
 ### todo:
-- [ ] player movement
-- [ ] improve jumping
+- [x] player movement
+- [x] improve jumping
+- [x] deployed
 - [ ] add basic enemy
 - [ ] jump sound
 - [ ] menu start sound

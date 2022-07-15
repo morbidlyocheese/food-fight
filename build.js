@@ -2688,7 +2688,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     height: 240,
     scale: 2
   });
-  var SPEED = 100;
+  var SPEED = 140;
   loadRoot("img/");
   loadSprite("block", "iso-block.png");
   loadSprite("banan", "banan-man.png");
@@ -2706,7 +2706,8 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       char.move(SPEED, 0);
     });
     onKeyDown("space", () => {
-      char.jump();
+      if (char.isGrounded())
+        char.jump();
     });
     add([
       rect(width(), 48),
