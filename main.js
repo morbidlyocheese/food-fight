@@ -2,6 +2,7 @@ import kaboom from "kaboom";
 
 kaboom({
   background: [134, 135, 247],
+  font: "sinko",
   width: 320,
   height: 240,
   scale: 2,
@@ -12,6 +13,7 @@ const SPEED = 140; // 140 feels like a sweet spot
 loadRoot('img/');
 loadSprite('block', 'iso-block.png');
 loadSprite('banan', 'banan-man.png');
+loadSprite('platform', 'platform.png');
 
 
 scene('game', () => {
@@ -23,6 +25,9 @@ scene('game', () => {
       body()
   ]);
 
+  onKeyDown('r', () => {
+    go('start');
+  });
   onKeyDown('left', () => {
     char.move(-SPEED, 0);
   });
@@ -34,18 +39,64 @@ scene('game', () => {
   });
   
   add([
-      rect(width(), 48),
-      pos(0, height() - 48),
-      outline(4),
+      sprite('platform'),
+      pos(0, height() - 16),
       area(),
       solid(),
-      color(127, 200, 255),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*2, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*3, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*4, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*5, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*6, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*7, height() - 16),
+      area(),
+      solid(),
+  ]);
+  add([
+      sprite('platform'),
+      pos(16*8, height() - 16),
+      area(),
+      solid(),
   ]);
 });
 
 scene('start', () => {
   add([
-    text('press space to start', { size: 24 }),
+    text('press space to start', { size: 18 }),
     pos(vec2(160, 120)),
     origin('center'),
     color(255, 255, 255)
