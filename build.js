@@ -2683,7 +2683,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
 
   // main.js
   no({
-    background: [134, 135, 247],
+    background: [40, 42, 54],
     font: "sinko",
     width: 320,
     height: 240,

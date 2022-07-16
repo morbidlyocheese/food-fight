@@ -12,8 +12,10 @@ food fight
 - [ ] add basic enemy
 - [ ] jump sound
 - [ ] menu start sound
+- [ ] implement levels into main
+- [ ] design 5 levels
+- [ ] move game container
 - [ ] 
-
 
 ---
 ### dev cli commands

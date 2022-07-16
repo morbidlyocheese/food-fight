@@ -1,7 +1,7 @@
 import kaboom from "kaboom";
 
 kaboom({
-  background: [134, 135, 247],
+  background: [40, 42, 54],
   font: "sinko",
   width: 320,
   height: 240,
