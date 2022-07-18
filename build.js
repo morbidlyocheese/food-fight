@@ -2699,6 +2699,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   loadSound("select", "menu_browsing.wav");
   loadSound("jump", "jump.wav");
   loadSound("hurt", "hurt.wav");
+  loadSound("powerup", "powerup.wav");
   scene("game", () => {
     const level = addLevel([
       "@    x    i",
@@ -2761,6 +2762,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
       shake(10);
     });
     char.onCollide("powerup", (powerup) => {
+      play("powerup");
       destroy(powerup);
     });
   });

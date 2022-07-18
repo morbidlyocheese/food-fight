@@ -20,6 +20,7 @@ loadRoot('snd/');
 loadSound('select', 'menu_browsing.wav');
 loadSound('jump', 'jump.wav');
 loadSound('hurt', 'hurt.wav');
+loadSound('powerup', 'powerup.wav');
 
 
 scene('game', () => {
@@ -87,6 +88,7 @@ scene('game', () => {
     shake(10);
   });
   char.onCollide('powerup', (powerup) => {
+    play('powerup');
     destroy(powerup);
   });
 });
