@@ -9,12 +9,18 @@ food fight
 - [x] player movement
 - [x] improve jumping
 - [x] deployed
+- [x] jump sound
+- [x] menu start sound
 - [ ] add basic enemy
-- [ ] jump sound
-- [ ] menu start sound
 - [ ] implement levels into main
 - [ ] design 5 levels
 - [ ] move game container
+- [ ] design banan man animations
+    - [ ] jump
+    - [ ] run
+    - [ ] idle
+    - [ ] hurt
+    - [ ] attack
 - [ ] 
 
 ---
