@@ -14,6 +14,7 @@ loadRoot('img/');
 loadSprite('block', 'iso-block.png');
 loadSprite('banan', 'banan-man.png');
 loadSprite('platform', 'platform.png');
+loadSprite('pete', 'pizza-pete.png');
 loadSprite('ouchie', 'temp_ouch-block.png');
 
 loadRoot('snd/');
@@ -26,8 +27,23 @@ loadSound('powerup', 'powerup.wav');
 scene('game', () => {
   // level/s
   const level = addLevel([
-    "@    x    i",
-    "==========="
+    "= p                    ",
+    "= =                    ",
+    "=                      ",
+    "=                      ",
+    "=   ==                 ",
+    "=                      ",
+    "=                      ",
+    "=                      ",
+    "=                      ",
+    "=           ===========",
+    "=           =",
+    "=           =",
+    "=           =",
+    "=           =",
+    "=           =",
+    "=@    x    i=",
+    "============="
   ], {
     width: 16,
     height: 16,
@@ -38,6 +54,12 @@ scene('game', () => {
       body(),
       origin('bot'),
       'player',
+    ],
+    "p": () => [
+      sprite('pete'),
+      area(),
+      origin('bot'),
+      'npc',
     ],
     "=": () => [
       sprite('platform'),

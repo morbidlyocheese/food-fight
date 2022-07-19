@@ -2694,6 +2694,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   loadSprite("block", "iso-block.png");
   loadSprite("banan", "banan-man.png");
   loadSprite("platform", "platform.png");
+  loadSprite("pete", "pizza-pete.png");
   loadSprite("ouchie", "temp_ouch-block.png");
   loadRoot("snd/");
   loadSound("select", "menu_browsing.wav");
@@ -2702,8 +2703,23 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   loadSound("powerup", "powerup.wav");
   scene("game", () => {
     const level = addLevel([
-      "@    x    i",
-      "==========="
+      "= p                    ",
+      "= =                    ",
+      "=                      ",
+      "=                      ",
+      "=   ==                 ",
+      "=                      ",
+      "=                      ",
+      "=                      ",
+      "=                      ",
+      "=           ===========",
+      "=           =",
+      "=           =",
+      "=           =",
+      "=           =",
+      "=           =",
+      "=@    x    i=",
+      "============="
     ], {
       width: 16,
       height: 16,
@@ -2714,6 +2730,12 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
         body(),
         origin("bot"),
         "player"
+      ],
+      "p": () => [
+        sprite("pete"),
+        area(),
+        origin("bot"),
+        "npc"
       ],
       "=": () => [
         sprite("platform"),
