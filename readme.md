@@ -10,6 +10,7 @@ food fight
 - [x] improve jumping
 - [x] deployed
 - [x] jump sound
+    - [ ] fix volume
 - [x] menu start sound
 - [ ] add basic enemy
 - [ ] implement levels into main
